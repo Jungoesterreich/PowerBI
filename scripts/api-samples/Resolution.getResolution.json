@@ -1,0 +1,38 @@
+[
+    {
+        "label": "1920x1080",
+        "nb_uniq_visitors": 423,
+        "nb_visits": 466,
+        "nb_actions": "4444",
+        "nb_users": 0,
+        "max_actions": 96,
+        "sum_visit_length": "155415",
+        "bounce_count": "37",
+        "nb_visits_converted": "3",
+        "segment": "resolution==1920x1080"
+    },
+    {
+        "label": "1536x864",
+        "nb_uniq_visitors": 334,
+        "nb_visits": 372,
+        "nb_actions": "3257",
+        "nb_users": 0,
+        "max_actions": 78,
+        "sum_visit_length": "122482",
+        "bounce_count": "32",
+        "nb_visits_converted": "2",
+        "segment": "resolution==1536x864"
+    },
+    {
+        "label": "1280x720",
+        "nb_uniq_visitors": 179,
+        "nb_visits": 204,
+        "nb_actions": "1518",
+        "nb_users": 0,
+        "max_actions": 37,
+        "sum_visit_length": "52228",
+        "bounce_count": "22",
+        "nb_visits_converted": "1",
+        "segment": "resolution==1280x720"
+    }
+]

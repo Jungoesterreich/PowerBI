@@ -1,0 +1,38 @@
+[
+    {
+        "label": "Windows",
+        "nb_uniq_visitors": 1225,
+        "nb_visits": 1373,
+        "nb_actions": "11977",
+        "nb_users": 0,
+        "max_actions": 96,
+        "sum_visit_length": "436813",
+        "bounce_count": "115",
+        "nb_visits_converted": "6",
+        "logo": "plugins/Morpheus/icons/dist/os/WIN.png"
+    },
+    {
+        "label": "iOS",
+        "nb_uniq_visitors": 260,
+        "nb_visits": 298,
+        "nb_actions": 1405,
+        "nb_users": 0,
+        "max_actions": 80,
+        "sum_visit_length": 42149,
+        "bounce_count": 93,
+        "nb_visits_converted": 1,
+        "logo": "plugins/Morpheus/icons/dist/os/IOS.png"
+    },
+    {
+        "label": "Mac",
+        "nb_uniq_visitors": 261,
+        "nb_visits": 294,
+        "nb_actions": "2117",
+        "nb_users": 0,
+        "max_actions": 74,
+        "sum_visit_length": "67288",
+        "bounce_count": "54",
+        "nb_visits_converted": "2",
+        "logo": "plugins/Morpheus/icons/dist/os/MAC.png"
+    }
+]

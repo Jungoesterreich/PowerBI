@@ -1,0 +1,57 @@
+# Local development stack for JoeSync.
+#
+#   docker compose up -d
+#
+# Brings up SQL Server AND creates an empty `JOEDB_KPI` database, so you can
+# connect right away (sa / DevPassword123!, localhost,1433). The application
+# (Worker / Console / API) then creates the tables via EF Core migrations on
+# first run.
+#
+# Reset to a clean slate (e.g. after changing the password):
+#   docker compose down -v
+#
+# Note: this stack binds host port 1433 — stop any other local SQL Server
+# container first, otherwise the port is already in use.
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "DevPassword123!"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqldata:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P \"$$MSSQL_SA_PASSWORD\" -C -Q \"SELECT 1\" -b -o /dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+
+  # One-shot init: waits until SQL Server is healthy, then creates the
+  # JOEDB_KPI database if it does not exist yet. Exits immediately afterwards.
+  db-init:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    environment:
+      MSSQL_SA_PASSWORD: "DevPassword123!"
+    entrypoint:
+      - /opt/mssql-tools18/bin/sqlcmd
+      - -S
+      - sqlserver
+      - -U
+      - sa
+      - -P
+      - "DevPassword123!"
+      - -C
+      - -b
+      - -Q
+      - "IF DB_ID('JOEDB_KPI') IS NULL CREATE DATABASE JOEDB_KPI;"
+    restart: "no"
+
+volumes:
+  sqldata:

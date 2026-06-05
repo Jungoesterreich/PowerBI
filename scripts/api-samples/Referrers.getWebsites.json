@@ -1,0 +1,41 @@
+[
+    {
+        "label": "ntp.msn.com",
+        "nb_uniq_visitors": 4,
+        "nb_visits": 4,
+        "nb_actions": 24,
+        "nb_users": 0,
+        "max_actions": 7,
+        "sum_visit_length": 1407,
+        "bounce_count": 0,
+        "nb_visits_converted": 0,
+        "segment": "referrerName==ntp.msn.com",
+        "idsubdatatable": 4
+    },
+    {
+        "label": "www.symbaloo.com",
+        "nb_uniq_visitors": 4,
+        "nb_visits": 4,
+        "nb_actions": 46,
+        "nb_users": 0,
+        "max_actions": 29,
+        "sum_visit_length": 3794,
+        "bounce_count": 0,
+        "nb_visits_converted": 0,
+        "segment": "referrerName==www.symbaloo.com",
+        "idsubdatatable": 13
+    },
+    {
+        "label": "files.jungoesterreich.at",
+        "nb_uniq_visitors": 2,
+        "nb_visits": 2,
+        "nb_actions": 21,
+        "nb_users": 0,
+        "max_actions": 15,
+        "sum_visit_length": 215,
+        "bounce_count": 0,
+        "nb_visits_converted": 0,
+        "segment": "referrerName==files.jungoesterreich.at",
+        "idsubdatatable": 2
+    }
+]

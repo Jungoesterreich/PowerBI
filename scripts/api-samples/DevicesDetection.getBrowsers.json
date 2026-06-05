@@ -1,0 +1,73 @@
+[
+    {
+        "label": "Chrome",
+        "nb_uniq_visitors": 531,
+        "nb_visits": 608,
+        "nb_actions": "4947",
+        "nb_users": 0,
+        "max_actions": 85,
+        "sum_visit_length": "183196",
+        "bounce_count": "65",
+        "nb_visits_converted": "3",
+        "goals": {
+            "idgoal=3": {
+                "nb_conversions": 1,
+                "nb_visits_converted": 1,
+                "revenue": 1
+            },
+            "idgoal=4": {
+                "nb_conversions": 6,
+                "nb_visits_converted": 2,
+                "revenue": 6
+            }
+        },
+        "nb_conversions": 7,
+        "revenue": 7,
+        "logo": "plugins/Morpheus/icons/dist/browsers/CH.png",
+        "segment": "browserCode==CH"
+    },
+    {
+        "label": "Microsoft Edge",
+        "nb_uniq_visitors": 541,
+        "nb_visits": 593,
+        "nb_actions": "5265",
+        "nb_users": 0,
+        "max_actions": 96,
+        "sum_visit_length": "183812",
+        "bounce_count": "39",
+        "nb_visits_converted": "2",
+        "goals": {
+            "idgoal=4": {
+                "nb_conversions": 2,
+                "nb_visits_converted": 2,
+                "revenue": 2
+            }
+        },
+        "nb_conversions": 2,
+        "revenue": 2,
+        "logo": "plugins/Morpheus/icons/dist/browsers/PS.png",
+        "segment": "browserCode==PS"
+    },
+    {
+        "label": "Firefox",
+        "nb_uniq_visitors": 236,
+        "nb_visits": 266,
+        "nb_actions": "2341",
+        "nb_users": 0,
+        "max_actions": 78,
+        "sum_visit_length": "88085",
+        "bounce_count": "28",
+        "nb_visits_converted": "2",
+        "goals": {
+            "idgoal=4": {
+                "nb_conversions": 2,
+                "nb_visits_converted": 2,
+                "revenue": 2
+            }
+        },
+        "nb_conversions": 2,
+        "revenue": 2,
+        "logo": "plugins/Morpheus/icons/dist/browsers/FF.png",
+        "segment": "browserCode==FF"
+    }
+]

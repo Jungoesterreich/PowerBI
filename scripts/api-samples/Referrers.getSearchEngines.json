@@ -1,0 +1,58 @@
+[
+    {
+        "label": "Google",
+        "nb_visits": 865,
+        "nb_actions": 7716,
+        "nb_users": 0,
+        "max_actions": 85,
+        "sum_visit_length": 246421,
+        "bounce_count": 21,
+        "nb_visits_converted": 3,
+        "goals": {
+            "idgoal=3": {
+                "nb_conversions": 2,
+                "nb_visits_converted": 2,
+                "revenue": 2
+            },
+            "idgoal=4": {
+                "nb_conversions": 8,
+                "nb_visits_converted": 4,
+                "revenue": 8
+            }
+        },
+        "nb_conversions": 10,
+        "revenue": 10,
+        "segment": "referrerType==search;referrerName=@Google",
+        "url": "http://google.com",
+        "logo": "plugins/Morpheus/icons/dist/searchEngines/google.com.png",
+        "idsubdatatable": 5
+    },
+    {
+        "label": "Bing & Yahoo!",
+        "nb_visits": 292,
+        "nb_actions": 2986,
+        "nb_users": 0,
+        "max_actions": 96,
+        "sum_visit_length": 109862,
+        "bounce_count": 6,
+        "nb_visits_converted": 0,
+        "segment": "referrerType==search;referrerName=@Bing,referrerName=@Yahoo",
+        "url": "http://bing.com",
+        "logo": "plugins/Morpheus/icons/dist/searchEngines/bing.com.png",
+        "idsubdatatable": 1
+    },
+    {
+        "label": "Ecosia",
+        "nb_visits": 7,
+        "nb_actions": 75,
+        "nb_users": 0,
+        "max_actions": 31,
+        "sum_visit_length": 1734,
+        "bounce_count": 0,
+        "nb_visits_converted": 0,
+        "segment": "referrerType==search;referrerName==Ecosia",
+        "url": "http://ecosia.org",
+        "logo": "plugins/Morpheus/icons/dist/searchEngines/ecosia.org.png",
+        "idsubdatatable": 4
+    }
+]

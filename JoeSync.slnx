@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="CLAUDE.md" />
+    <File Path=".editorconfig" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/JoeSync.Console/JoeSync.Console.csproj" Id="96789a64-d5e6-473a-8759-a80804ed2064" />
+    <Project Path="src/JoeSync.Core/JoeSync.Core.csproj" Id="801392db-e1ef-4eda-842f-0de0a3ea030d" />
+    <Project Path="src/JoeSync.Importers/JoeSync.Importers.csproj" Id="5facaf63-2ad9-45bf-a46c-0b73df7fde1f" />
+    <Project Path="src/JoeSync.Worker/JoeSync.Worker.csproj" />
+    <Project Path="src/JoeSync.Api/JoeSync.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/JoeSync.Importers.Tests/JoeSync.Importers.Tests.csproj" />
+    <Project Path="tests/JoeSync.Api.Tests/JoeSync.Api.Tests.csproj" />
+    <Project Path="tests/JoeSync.Worker.Tests/JoeSync.Worker.Tests.csproj" />
+  </Folder>
+</Solution>

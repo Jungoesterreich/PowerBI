@@ -1,0 +1,153 @@
+@import "./styles/tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: var(--fg);
+  }
+}
+
+@layer components {
+  .input {
+    @apply rounded border bg-white px-2.5 py-1.5 text-sm shadow-sm
+           focus:border-fg focus:outline-none focus:ring-1 focus:ring-fg;
+    border-color: var(--border);
+  }
+
+  /* Compact secondary filter controls placed under PageHeader. */
+  .sub-select,
+  .sub-input {
+    height: 30px;
+    padding: 0 8px;
+    font-size: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    color: var(--fg);
+  }
+  .sub-select:focus,
+  .sub-input:focus {
+    outline: none;
+    border-color: var(--fg);
+  }
+
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .panel-pad {
+    padding: var(--pad-card);
+  }
+
+  .table-head {
+    @apply text-left text-xs font-medium uppercase tracking-wide;
+    color: var(--fg-3);
+    background: var(--surface-2);
+  }
+
+  .table-cell {
+    @apply px-3 py-2 text-sm whitespace-nowrap;
+  }
+
+  /* Mono numerals: tabular-nums to keep KPI columns aligned */
+  .num {
+    @apply font-mono;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Sidebar nav items */
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    margin: 1px 0;
+    border-radius: var(--r);
+    font-size: 13px;
+    color: var(--fg-2);
+    border: 1px solid transparent;
+    transition: background-color 80ms, border-color 80ms;
+  }
+  .nav-item:hover:not(:disabled) {
+    background: var(--surface-2);
+  }
+  .nav-item.is-active {
+    background: var(--surface-2);
+    border-color: var(--border);
+    color: var(--fg);
+    font-weight: 500;
+  }
+  .nav-item:disabled {
+    color: var(--fg-4);
+    cursor: default;
+  }
+
+  /* Brand chip — the critical UX hinge from the prototype.
+     Background MUST be applied via the CSS variable --bc;
+     inline background overrides have proven unreliable in tests. */
+  .brand-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px 4px 8px;
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    background: var(--surface);
+    color: var(--fg-2);
+    font-size: 12px;
+    line-height: 1.4;
+    transition: background-color 80ms, border-color 80ms, color 80ms, box-shadow 80ms;
+    white-space: nowrap;
+  }
+  .brand-chip:hover:not(.active) {
+    background: color-mix(in oklch, var(--bc, var(--fg-3)) 6%, var(--surface));
+    border-color: var(--bc, var(--border-strong));
+  }
+  .brand-chip.active {
+    background: var(--bc, var(--fg));
+    border-color: var(--bc, var(--fg));
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 1px 3px color-mix(in oklch, var(--bc, var(--fg)) 30%, transparent);
+  }
+  .brand-chip .dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--bc, var(--fg-3));
+  }
+  .brand-chip.active .dot {
+    background: rgba(255, 255, 255, 0.85);
+  }
+  .brand-chip .brand-chip-id {
+    font-family: 'Geist Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: color-mix(in oklch, var(--bc, var(--fg-3)) 12%, var(--surface-2));
+    padding: 1px 5px;
+    border-radius: 3px;
+    color: var(--fg-2);
+  }
+  .brand-chip.active .brand-chip-id {
+    background: rgba(255, 255, 255, 0.22);
+    color: white;
+  }
+  .brand-chip .brand-chip-label {
+    font-size: 12px;
+  }
+}

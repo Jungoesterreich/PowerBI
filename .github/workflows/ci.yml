@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    name: Build & Test (.NET)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore
+        run: dotnet restore JoeSync.slnx
+
+      # Treat warnings as errors so the documented "no warnings" convention is
+      # enforced at the gate. The unit tests are pure (no SQL Server needed),
+      # so the whole job runs on a clean Linux runner.
+      - name: Build
+        run: dotnet build JoeSync.slnx --configuration Release --no-restore -warnaserror
+
+      - name: Test
+        run: dotnet test JoeSync.slnx --configuration Release --no-build --verbosity normal

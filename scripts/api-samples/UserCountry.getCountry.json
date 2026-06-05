@@ -1,0 +1,61 @@
+[
+    {
+        "label": "Austria",
+        "nb_uniq_visitors": 1114,
+        "nb_visits": 1231,
+        "nb_actions": 9391,
+        "nb_users": 0,
+        "max_actions": 96,
+        "sum_visit_length": 328359,
+        "bounce_count": 182,
+        "nb_visits_converted": 8,
+        "goals": {
+            "idgoal=3": {
+                "nb_conversions": 2,
+                "nb_visits_converted": 2,
+                "revenue": 2
+            },
+            "idgoal=4": {
+                "nb_conversions": 10,
+                "nb_visits_converted": 6,
+                "revenue": 10
+            }
+        },
+        "nb_conversions": 12,
+        "revenue": 12,
+        "code": "at",
+        "logo": "plugins/Morpheus/icons/dist/flags/at.png",
+        "segment": "countryCode==at",
+        "logoHeight": 16
+    },
+    {
+        "label": "Russia",
+        "nb_uniq_visitors": 161,
+        "nb_visits": 170,
+        "nb_actions": 1291,
+        "nb_users": 0,
+        "max_actions": 49,
+        "sum_visit_length": 37914,
+        "bounce_count": 12,
+        "nb_visits_converted": 0,
+        "code": "ru",
+        "logo": "plugins/Morpheus/icons/dist/flags/ru.png",
+        "segment": "countryCode==ru",
+        "logoHeight": 16
+    },
+    {
+        "label": "Italy",
+        "nb_uniq_visitors": 144,
+        "nb_visits": 161,
+        "nb_actions": 1405,
+        "nb_users": 0,
+        "max_actions": 49,
+        "sum_visit_length": 59466,
+        "bounce_count": 17,
+        "nb_visits_converted": 0,
+        "code": "it",
+        "logo": "plugins/Morpheus/icons/dist/flags/it.png",
+        "segment": "countryCode==it",
+        "logoHeight": 16
+    }
+]

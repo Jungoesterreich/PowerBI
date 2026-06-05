@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "JoeSync.Core": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
